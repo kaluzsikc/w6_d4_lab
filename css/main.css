@@ -1,3 +1,26 @@
 body {
   font-family: Palatino;
+
+}
+
+#form-wrapper{
+  display: flex;
+}
+
+.form-item{
+  padding: 10px;
+}
+
+#reading-list{
+  padding: 10px;
+  display: flex;
+  align-items: left;
+}
+
+.box{
+  margin: 10px;
+  border-radius: 10px;
+  border: solid 1px darkblue;
+  background-color: pink;
+  padding: 10px;
 }

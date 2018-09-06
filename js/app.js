@@ -16,9 +16,28 @@ const handleFormSubmit = function(event) {
   // console.log('events author', event.target.author.value);
   // console.log('events category', event.target.category.value);
 
-  const resultingMessage = `Your reading list is : ${event.target.title.value} by ${event.target.author.value} from category ${event.target.category.value} `;
-  const resultParagraph = document.createElement('p');
-  resultParagraph.textContent = resultingMessage;
+  // const resultingMessage = `${event.target.title.value} ${event.target.author.value} ${event.target.category.value} `;
+
+
+
+  const resultTitle = document.createElement('h1');
+  resultTitle.textContent = event.target.title.value;
+
+
+  const resultAuthor = document.createElement('h3');
+  resultAuthor.textContent = event.target.author.value;
+
+
+  const resultCategory = document.createElement('p');
+  resultCategory.textContent = event.target.category.value;
+
+  const resultParagraph = document.createElement('div');
+  resultParagraph.append(resultTitle);
+  resultParagraph.append(resultAuthor);
+  resultParagraph.append(resultCategory);
+  resultParagraph.classList.add('box');
+
+
   const result = document.querySelector('#reading-list');
   result.append(resultParagraph);
   this.reset();
