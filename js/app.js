@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-item-form');
     form.addEventListener('submit', handleFormSubmit);
 
+  const deleteAll = document.querySelector('#delete-all');
+  deleteAll.addEventListener('click', deleteAllClick);
 })
 
 
@@ -20,4 +22,11 @@ const handleFormSubmit = function(event) {
   const result = document.querySelector('#reading-list');
   result.append(resultParagraph);
   this.reset();
+}
+
+const deleteAllClick = function () {
+  const listToDelete = document.querySelector('#reading-list');
+  while (listToDelete.firstChild) {
+    listToDelete.removeChild(listToDelete.firstChild);
+  }
 }
